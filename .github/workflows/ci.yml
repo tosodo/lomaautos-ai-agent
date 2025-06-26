@@ -27,6 +27,17 @@ jobs:
         run: |
           pip install flake8
           flake8 backend/fastapi --count --show-source --statistics
+- name: Run tests with pytest
+  run: |
+    pip install pytest
+    pytest backend/fastapi/tests
+
 
       - name: FastAPI healthcheck (dry run)
         run: echo "Healthcheck placeholder. Add live server test later."
+
+- name: Run tests with pytest
+  run: |
+    pip install pytest
+    pytest backend/fastapi/tests
+
